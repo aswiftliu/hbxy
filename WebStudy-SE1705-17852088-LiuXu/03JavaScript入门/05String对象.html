@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String对象</title>
+</head>
+<body>
+    <script language="JavaScript">
+        //字符串定义
+        var str1='hello world';
+        var str2=new String('hello world');
+        console.log(str1.length);
+
+        //大小写转换
+        var str1='AdgkhFs';
+        str2=str1.toUpperCase();
+        console.log(str2);
+        str3=str1.toLowerCase();
+        console.log(str3);
+
+        //获取指定字符
+        var str1='JavaScript内置对象';
+        console.log(str1.charAt(12));
+        console.log(str1.charCodeAt(12));
+
+        //查询指定字符串
+        var str1='JavaScript内置对象';
+        console.log(str1.indexOf('a'));
+        console.log(str1.lastIndexOf('a'));
+
+        //获取字符串
+        var str1='JavaScript内置对象';
+        console.log(str1.substring(4,10));
+        console.log(str1.substr(4,6));
+
+        //替换字符串
+        var str1='JavaScript内置对象';
+        var str2=str1.replace('内置对象','常用内置对象');
+        console.log(str2);
+
+        //拆分字符串
+        var str1='how do you do';
+        var array1=str1.split('');
+        for(x in array1){
+            console.log(array1[x]);
+        }
+    </script>
+</body>
+</html>

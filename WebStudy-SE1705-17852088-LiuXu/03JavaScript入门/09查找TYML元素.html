@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找HTML元素</title>
+</head>
+<body>
+
+<!--    通过id查找-->
+    <input id="idText" name="nameTxt" type="text" value="11111">
+    <input type="button" value="通过id查找元素" onclick="getById()">
+    <br>
+    <script language="JavaScript">
+        function getById() {
+            var obj=document.getElementById("idText");
+            console.log("idText.value="+obj.value);
+            alert(obj.value);
+        }
+    </script>
+
+<!--通过name查找-->
+    <input id="myid1" name="myname" value="1111" type="text">
+    <Input id="myid2" name="myname" value="2222" type="text">
+    <input type="button" value="通过name查找元素" onclick="getByName()">
+    <br>
+    <script language="JavaScript">
+        function getByName() {
+            var obj=document.getElementsByName("myname");
+            for (var i=0;i<obj.length;i++){
+                console.log(obj[i].value);
+            }
+        }
+    </script>
+
+<!--通过标签名查找-->
+    <div id="div1">
+        <p>DOM模型</p>
+        <p>通过标签名称查找元素</p>
+    </div>
+    <br>
+    <input type="button" value="通过tag查找元素" onclick="getByTag()">
+    <script language="JavaScript">
+        function getByTag() {
+            var obj1=document.getElementById(("div1"));
+            var obj2=obj1.getElementsByTagName("p");
+            for(var i=0;i<obj2.length;i++){
+                console.log(obj2[i].innerHTML);
+            }
+        }
+    </script>
+
+<!--通过类名查找-->
+    <div id="div2" class="mydiv2">
+        <p>DOM模型</p>
+        <p>通过类名称查找元素</p>
+    </div>
+    <input type="button" value="通过class查找元素" onclick="getByClazz()">
+    <br>
+    <script language="JavaScript">
+        function getByClazz() {
+            var obj1=document.getElementsByClassName("mydiv2");
+            var obj2=obj1[0].getElementsByTagName("p");
+            for(var i=0;i<obj2.length;i++){
+                console.log(obj2[i].innerHTML);
+                alert(obj2[i].innerHTML);
+            }
+        }
+    </script>
+
+<!--通过query方法查找-->
+    <div id="div3">
+        <p>第一段落</p>
+        <p>第二段落</p>
+        <p>第三段落</p>
+        <p>第四段落</p>
+    </div>
+    <br>
+    <input type="button" value="通过querySelector查找元素"
+           onclick="getByQuerySelector()">
+    <input type="button" value="通过querySelector查找元素"
+           onclick="getByQuerySelectorAll()">
+    <script language="JavaScript">
+        function getByQuerySelector() {
+            var obj1=document.getElementById("div3");
+            var obj2=obj1.querySelector("p");
+            console.log(obj2.innerHTML);
+        }
+
+        function getByQuerySelectorAll() {
+            var obj1=document.getElementById("div3");
+            var obj2=obj1.querySelectorAll("p");
+            for(var i=0;i<obj2.length;i++)
+            {
+                console.log(obj2[i].innerHTML);
+            }
+        }
+    </script>
+</body>
+</html>

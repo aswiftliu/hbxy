@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加或删除HTML元素</title>
+</head>
+<body>
+    <div id="div1" align="center">
+        <p>第一个段落 第一个段落 第一个段落 第一个段落 第一个段落</p>
+    </div>
+    <br>
+    <div align="center">
+        <input id="btnAdd" onclick="addP()" type="button" value="添加段落">
+        <input id="btnDel" onclick="delP()" type="button" value="删除段落">
+    </div>
+    <script language="JavaScript">
+        function addP() {
+            //1.获得的div容器
+            var div1Container=document.getElementById("div1");
+            //2.创建一个新的<p>元素
+            var para=document.createElement("p");
+            //3.给p标签添加文本
+            //方法一 向<p>元素添加文本，先创建一个文本节点
+            //并向<p>元素追加这个文本节点
+            var node=document.createTextNode("通过文本节点添加的新段落。");
+            para.appendChild(node);
+            //方法二：向<p>元素添加文本，先创建一个文本节点
+            //para.innerHTML="通过文本节点添加的新段落";
+
+            //4.往容器添加元素
+            div1Container.append(para);
+        }
+    </script>
+
+    <script language="JavaScript">
+        function delP() {
+            //1.获得的div容器
+            var div1Container=document.getElementById("div1");
+            //var div1Container=document.querySelector("#div1");
+            //var div1Container=document.querySelector(".mydiv1");
+
+            //2.通过querySelectorAll方法获得容器内所有p标签
+            var myNodeList=div1Container.querySelectorAll("p");
+
+            //3.从容器删除子节点
+            var index=myNodeList.length-1;
+            div1Container.removeChild(myNodeList[index]);
+        }
+    </script>
+    <br>
+    <br>
+
+    <table id="mytable" width="50%" align="center"
+           border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td width="30%">序号</td>
+            <td>姓名</td>
+        </tr>
+    </table>
+    <br>
+    <div align="center">
+        <input id="btnAdd" onclick="addRow()"
+        type="button" value="添加一行">
+        <input id="btnDel" onclick="delRow()"
+        type="button" value="删除一行">
+    </div>
+    <script language="JavaScript">
+        function addRow() {
+            var mytable=document.getElementById("mytable");
+            var rowNums=mytable.rows.length;
+            var newRow=mytable.insertRow(rowNums);
+            var col1=newRow.insertCell(0);
+            col1.innerHTML=rowNums;
+            var col2=newRow.insertCell(1);
+            col2.innerHTML="张三"+rowNums;
+        }
+
+    </script>
+</body>
+</html>

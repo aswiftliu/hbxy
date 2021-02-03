@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EventTarget接口</title>
+</head>
+<body>
+<!--1.直接绑定-->
+    <input type="button" value="DOM事件绑定" id="btnEvent">
+    <script language="JavaScript">
+        function hello() {
+            console.log('Hello world');
+        }
+        var button1=document.getElementById('btnEvent');
+        button1.addEventListener('click',hello,false);
+    </script>
+    <br>
+    <br>
+<!--2.匿名函数方法-->
+    <input type="button" value="DOM事件绑定" id="btnEvent">
+    <script language="JavaScript">
+        var button2=document.getElementById('btnEvent');
+        button2.addEventListener('click',function (e) {
+            console.log(this.nodeName);
+        },false);
+    </script>
+    <br>
+    <br>
+<!--3.采用handleEvent对象方法定义-->
+    <input type="button" value="DOM时间绑定" id="btnEvent">
+    <script language="JavaScript">
+        document.getElementById('btnEvent').addEventListener('click',{
+            handleEvent:function(event) {
+                console.log('click');
+            }
+        });
+    </script>
+</body>
+</html>

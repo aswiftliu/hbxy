@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+</head>
+<body>
+<table border="1"align="center">
+    <caption>我的表格</caption>
+    <tr valign="middle">
+        <td height="40">第1行第1列</td>
+        <td>第1行第2列</td>
+    </tr>
+    <tr>
+        <td>第2行第1列</td>
+        <td>第2行第2列</td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<table border="1"width="300"align="center">
+    <thread>
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <td>张三</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>女</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<table border="1"align="center">
+    <caption>我的表格</caption>
+    <tr>
+        <td colspan="2">第一行第一列</td>
+<!--        <td>第一行第二列</td>-->
+        <td>第一行第三列</td>
+    </tr>
+    <tr>
+        <td>第二行第一列</td>
+        <td>第二行第二列</td>
+        <td rowspan="2">第二行第三列</td>
+    </tr>
+    <tr>
+        <td>第三行第一列</td>
+        <td>第三行第二列</td>
+<!--        <td>第三行第三列</td>-->
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<table border="0"align="center"width="400">
+    <tr>
+        <td>
+            用户列表&nbsp;&nbsp;&nbsp;
+            <input type="button"id="btnAdd"value="注册">&nbsp;&nbsp;
+            <input type="button"id="btnEdit"value="修改">&nbsp;&nbsp;
+            <input type="button"id="btnDel"value="删除">&nbsp;&nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="1"width="100%">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>姓名</td>
+                    <td>性别</td>
+                </tr>
+                <tr>
+                    <td><input type="radio"value="1"></td>
+                    <td>张三</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td><input type="radio"value="1"></td>
+                    <td>李四</td>
+                    <td>女</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <input type="button"id="btnUp"value="上一页">&nbsp;&nbsp;
+            <input type="button"id="btnNext"value="下一页">&nbsp;&nbsp;
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

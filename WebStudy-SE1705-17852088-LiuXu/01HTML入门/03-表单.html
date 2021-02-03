@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<form name="frmUser"id="frmUser"action="http://www.baidu.com"
+      enctype="multipart/form-data"
+      method="post">
+    <input type="hidden"name="clazzId"value="1705">
+<table width="60%" align="center"border="0"cellspacing="0">
+
+    <tr>
+        <td>用户注册</td>
+    </tr>
+
+    <tr>
+        <td>
+            <table width="100%"border="1"cellspacing="0"cellpadding="5">
+
+                <tr>
+                    <td align="right"width="30%">用户名：</td>
+                    <td>
+                        <input type="text"name="userName"
+                               id="userName"size="40"placeholder="请输入用户名">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="right">密码：</td>
+                    <td>
+                        <input type="password"name="userPwd"id="userPwd"
+                                size="40"placeholder="请输入密码">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="right">重复密码：</td>
+                    <td>
+                        <input type="password"name="userPwd2"id="userPwd2"size="40"
+                               placeholder="请输入重复密码">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="right">性别：</td>
+                    <td>
+                        <input type="radio"value="0"name="sex"id="sex1" checked>男&nbsp;
+                        <input type="radio"value="1"name="sex"id="sex2">女
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="right">爱好：</td>
+                    <td>
+                        <input type="checkbox"name="hobby"value="看电影">看电影<br>
+                        <input type="checkbox"name="hobby"value="听音乐">听音乐<br>
+                        <input type="checkbox"name="hobby"value="玩游戏">玩游戏<br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top">选择课程1：</td>
+                    <td><select>
+                        <option value="1">Java</option>
+                        <option value="2">C++</option>
+                        <option value="3"selected>Python</option>
+                        <option value="4">Ruby</option>
+                    </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top">选择课程2：</td>
+                    <td><select size="5">
+                        <option value="1">Java</option>
+                        <option value="2">C++</option>
+                        <option value="3"selected>Python</option>
+                        <option value="4">Ruby</option>
+                    </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top">个人简介：</td>
+                    <td>
+                        <textarea rows="5"cols="40"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>选择头像：</td>
+                    <td>
+                        <input type="file"/>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center">
+            <input type="submit"value="保存">&nbsp;
+            <input type="reset"value="重置">&nbsp;
+            <input type="button"name="btnCancel" value="取消">
+        </td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>

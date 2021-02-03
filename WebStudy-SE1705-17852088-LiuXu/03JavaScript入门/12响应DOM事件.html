@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应DOM事件</title>
+</head>
+<body>
+    <p onclick="clickme()"
+       onmouseover="overme()"
+       onmouseout="outme()">
+         点击我
+    </p>
+    <script language="JavaScript">
+        function clickme() {
+            console.log("点击p标签");
+        }
+        var p1=document.getElementsByTagName("p")[0];
+        function overme() {
+            pl.style.color="red";
+        }
+        function outme() {
+            pl.style.color="blue";
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="div1" style="width: 300px;height: 200px;
+    background-color: #3d3a80"></div>
+    <script language="JavaScript">
+        var div1=document.getElementById("div1");
+        div1.onmousemove=overme;
+        div1.onmouseout=outme;
+        function overme() {
+            div1.style.backgroundColor="red";
+        }
+        function outme() {
+            div1.style.backgroundColor="blue";
+        }
+    </script>
+</body>
+</html>

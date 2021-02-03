@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个JavaScript程序</title>
+</head>
+
+<body>
+        <input type="button"
+        value="事件定义方式"
+        onclick="alert('事件定义方式')">
+        <br>
+        <br>
+        <input type="button"name="btnJS"
+        value="嵌入式js"onclick="method1()">
+        <script language="JavaScript">
+            console.log('直接执行js代码')
+            function method1() {
+                alert('嵌入式js')
+            }
+        </script>
+        <br>
+        <br>
+        <script language="JavaScript">
+            hello('张三');
+            function hello(name) {
+                console.log('hello'+name);
+                alert('hello'+name);
+            }
+        </script>
+
+        <input type="button" name="btnJS"
+            value="文件引用方式" onclick="method2()">
+        <script src="./js/my.js"></script>
+
+
+</body>
+</html>

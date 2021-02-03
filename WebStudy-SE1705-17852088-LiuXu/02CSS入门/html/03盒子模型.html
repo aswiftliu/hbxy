@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        .box1{
+            width: 400px;
+            height: 200px;
+            background-color: red;
+            border: 30px solid black;
+        }
+
+        .box2{
+            margin-top: 40px;
+            width: 500px;
+            height: 300px;
+            background-color: blue;
+            border-top: 20px solid green;
+            border-right: 25px solid red;
+            border-bottom: 20px solid black;
+            border-left: 25px solid yellow;
+
+        }
+
+        .box3{
+            margin-top: 40px;
+            width: 500px;
+            height: 200px;
+            background-color: #3962ff;
+            border-top: 20px solid green;
+            border-right: 25px solid red;
+            border-bottom: 20px solid black;
+            border-left: 25px solid yellow;
+            border-width: 80px;
+        }
+
+        .box4{
+            margin-top: 60px;
+            width: 500px;
+            height: 300px;
+            background-color: blue;
+            border-top: 20px solid green;
+            border-right: 25px solid red;
+            border-bottom: 20px solid black;
+            border-left: 25px solid yellow;
+            padding-top: 80px ;
+            padding-right: 50px;
+            padding-bottom: 150px;
+            padding-left: 80px;
+        }
+
+        .box5{
+            margin-top: 60px;
+            width: 500px;
+            height: 300px;
+            background-color: blue;
+            border:20px solid rgba(0,0,0,0.5);
+            padding: 20px;
+            margin: 20px 0;
+            background-size: 140px;
+            background-position: center;
+            background-image: url('http://www.baidu.com');
+            background-color: gold;
+        }
+        .default{background-clip: border-box;}
+        .padding-box{background-clip: padding-box;}
+        .content-box{background-clip: content-box;}
+
+        .box6{
+            margin-top: 40px;
+            width: 500px;
+            height: 300px;
+            border:solid;
+            border-color: black;
+            background-color: sandybrown;
+            border-width: 10px 20px;/*上下 左右*/
+        }
+
+        .box7{
+            margin-top: 40px;
+            width: 500px;
+            height: 300px;
+            border: solid;
+            border-color: black;
+            background-color: sandybrown;
+            border-width: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+<div class="box6"></div>
+<div class="box7"></div>
+</body>
+</html>

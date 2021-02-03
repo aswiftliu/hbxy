@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式化表格</title>
+    <style>
+        table{
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid dodgerblue;
+            background-color: #f0f0f0;
+        }
+        .div{
+            width: 60%;
+            margin: auto;
+        }
+        table thead th:nth-child(1){
+            width: 30%;
+        }
+        table thead th:nth-child(2){
+            width: 20%;
+        }
+        table thead th:nth-child(3){
+            width: 15%;
+        }
+        table thead th:nth-child(4){
+            width: 35%;
+        }
+        th{
+            padding: 20px;
+        }
+        td{
+            padding: 20px;
+            text-align: right;
+        }
+        tbody tr:nth-child(odd){
+            background-color: #ffffff;
+        }
+        tbody tr:nth-child(even){
+            background-color: #f0f0f0;
+        }
+        thead{
+            background-color: #bfc2c3;
+        }
+        tfoot{
+            background-color: #bfc2c3;
+        }
+        caption{
+            font-family: 'Rock Salt', cursive;
+            padding: 20px;
+            font-style: italic;
+            caption-side: top;
+            color: #666;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <table>
+        <caption>软件专业17级男女生统计</caption>
+        <thead>
+           <tr>
+               <th>班级</th>
+               <td>男生</td>
+               <td>女生</td>
+               <td>班级合计</td>
+           </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>1701</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>1702</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>1703</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>1704</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>1705</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>年纪总和</th>
+            <td>20</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+</html>

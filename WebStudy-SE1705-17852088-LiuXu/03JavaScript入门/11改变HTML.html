@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变HTML</title>
+</head>
+<body>
+<!--    直接向HTML写内容-->
+    <script>
+        document.write('你好！');
+    </script>
+    <br>
+    <br>
+    <input type="text" id="username1" value="zhangsan">
+    <input type="text" id="username2" value="">
+    <input type="button" value="修改元素value值" onclick="editvalue()">
+    <script language="JavaScript">
+        function editvalue() {
+            var username1=document.getElementById("username1").value;
+            document.getElementById("username2").value=username1;
+        }
+    </script>
+    <br>
+    <br>
+
+<!--    使用innerHTML属性修改HTML内容-->
+    <p id="p1">Hello World!</p><br>
+    <h1 id="header">Old Header</h1><br>
+    <input type="button" value="改变<p>元素的内容" onclick="changeText()"><br>
+    <input type="button" value="改变<h1>元素的内容" onclick="changeHeader()">
+    <script language="JavaScript">
+        function changeText() {
+            document.getElementById("p1").innerText="新文本";
+        }
+        function changeHeader() {
+            var element=document.getElementById("header");
+            element.innerHTML="新标题";
+        }
+    </script>
+    <br>
+    <br>
+
+<!--使用attribute改变HTML元素的属性-->
+    <img id="image" src="http://www.bjtuhbxy.edu.cn/img/logo.jpg">
+    <br>
+    <input type="button" value="改变<image>元素的src属性" onclick="changeAttr()">
+    <script language="JavaScript">
+        function changeAttr() {
+            document.getElementById("image").src=
+                "http://computer.bjtuhbxy.edu.cn/images/xylogonew.png";
+        }
+    </script>
+
+<!--使用style.property改变HTML元素的形式-->
+    <p id="p1">Hello World!</p>
+    <p id="p2">Hello World!</p>
+    <input type="button" value="改变CSS" onclick="changeCSS()">
+    <script language="JavaScript">
+        function changeCSS() {
+            document.getElementById("p2").style.color="blue";
+            document.getElementById("p2").style.fontFamily="Arial";
+            document.getElementById("p2").style.fontSize="larger";
+        }
+    </script>
+</body>
+</html>

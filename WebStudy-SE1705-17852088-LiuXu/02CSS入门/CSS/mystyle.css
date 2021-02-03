@@ -1,0 +1,18 @@
+p1{
+    color:blue;
+    background-color: gold;
+    border: 1px solid black;
+}
+
+h1{
+    color:red;
+}
+
+p{
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: yellow;
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 99%center;
+}

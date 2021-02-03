@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date对象</title>
+</head>
+<body>
+    <script language="JavaScript">
+        //创建日期
+        var myDate1=new Date();
+        console.log("myDate1:"+myDate1);
+
+        var myDate2=new Date('2019-01-01 00:00:00');
+        console.log("myDate2:"+myDate2);
+
+        var myDate3=new Date();
+        myDate3.setFullYear(2019,0,14);
+        console.log("myDate3:"+myDate3);
+
+        //日期计算
+        var myDate4=myDate3;
+        myDate4.setDate(myDate3.getDate()+5);
+        console.log("myDate4="+myDate4);
+
+        //日期比较
+        if(myDate4>new Date())
+        {
+            console.log("myDate4大于今天");
+        }else {
+            console.log("myDate4小于今天");
+        }
+
+        //格式化输出
+        var myDate5=new Date();
+        console.log(myDate5.toISOString());
+        console.log(myDate5.toJSON());
+        console.log(myDate5.toLocaleString());
+        console.log(myDate5.toLocaleDateString());
+        console.log(myDate5.toLocaleTimeString());
+
+
+    </script>
+</body>
+</html>
